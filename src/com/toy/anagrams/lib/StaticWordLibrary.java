@@ -67,6 +67,7 @@ final class StaticWordLibrary extends WordLibrary {
         "optimization",
         "parameter",
         "patrick",
+        "pumpkin",
         "pickle",
         "polymorphic",
         "rigorously",
@@ -78,7 +79,7 @@ final class StaticWordLibrary extends WordLibrary {
         "management",
         "manipulate",
         "mathematics",
-        "hotjava",
+        "cooljava",
         "vertex",
         "unsigned",
         "traditional"};
@@ -114,6 +115,7 @@ final class StaticWordLibrary extends WordLibrary {
         "poitimazitno",
         "aparemert",
         "aprtcki",
+        "nuupmkpi",
         "ipkcel",
         "opylomprich",
         "irogorsuyl",
@@ -125,7 +127,7 @@ final class StaticWordLibrary extends WordLibrary {
         "amanegemtn",
         "aminupalet",
         "amhtmetacsi",
-        "ohjtvaa",
+        "ocojlvaa",
         "evtrxe",
         "nuisngde",
         "rtdatioialn"
