@@ -31,6 +31,8 @@
 
 package com.toy.anagrams.lib;
 
+import java.util.Random;
+
 /**
  * Implementation of the logic for the Anagram Game application.
  */
@@ -83,8 +85,32 @@ final class StaticWordLibrary extends WordLibrary {
         "vertex",
         "unsigned",
         "traditional"};
-
-    private static final String[] SCRAMBLED_WORD_LIST = {
+    static  String List(int idx ){
+    	String s = WORD_LIST[idx];
+    	int len = s.length();
+    	char[] a = new char[len];
+    	for (int i = 0; i < len; i++) {
+    	   a[i] = s.charAt(i);
+    	}
+    	Random r = new Random();
+    	int n = 5;
+    	while (n != 0) {
+    		int x = r.nextInt(len);
+    		int y = r.nextInt(len);
+    		if (x != y) {
+    			char x1 = a[x];
+    			a[x] = a[y];
+    			a[y] = x1;
+    			n--;
+    		}
+    	}
+    	String ans = "";
+    	for (int i = 0; i < len; i++) {
+    	   ans = ans + a[i];
+    	}
+    	return ans;
+    	    }
+    /*private static final String[] SCRAMBLED_WORD_LIST = {
         "batsartcoin",
         "maibuguos",
         "ratimhteci",
@@ -131,7 +157,7 @@ final class StaticWordLibrary extends WordLibrary {
         "evtrxe",
         "nuisngde",
         "rtdatioialn"
-    };
+    };*/
     
     final static WordLibrary DEFAULT = new StaticWordLibrary();
 
@@ -149,6 +175,7 @@ final class StaticWordLibrary extends WordLibrary {
     public String getWord(int idx) {
         return WORD_LIST[idx];
     }
+  
 
     /**
      * Gets the word at a given index in its scrambled form.
@@ -156,7 +183,7 @@ final class StaticWordLibrary extends WordLibrary {
      * @return word at that index in its scrambled form
      */
     public String getScrambledWord(int idx) {
-        return SCRAMBLED_WORD_LIST[idx];
+        return List(idx);
     }
 
     /**
@@ -176,5 +203,6 @@ final class StaticWordLibrary extends WordLibrary {
     public boolean isCorrect(int idx, String userGuess) {
         return userGuess.equals(getWord(idx));
     }
+    
 
 }
