@@ -85,7 +85,7 @@ final class StaticWordLibrary extends WordLibrary {
         "vertex",
         "unsigned",
         "traditional"};
-    static  String List(int idx ){
+    static  String List(int idx , int n){
     	String s = WORD_LIST[idx];
     	int len = s.length();
     	char[] a = new char[len];
@@ -93,7 +93,6 @@ final class StaticWordLibrary extends WordLibrary {
     	   a[i] = s.charAt(i);
     	}
     	Random r = new Random();
-    	int n = 5;
     	while (n != 0) {
     		int x = r.nextInt(len);
     		int y = r.nextInt(len);
@@ -182,8 +181,8 @@ final class StaticWordLibrary extends WordLibrary {
      * @param idx index of required word
      * @return word at that index in its scrambled form
      */
-    public String getScrambledWord(int idx) {
-        return List(idx);
+    public String getScrambledWord(int idx, int n) {
+        return List(idx, n);
     }
 
     /**
